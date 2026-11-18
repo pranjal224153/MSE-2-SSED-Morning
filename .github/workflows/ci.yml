@@ -1,3 +1,4 @@
+
 name: Docker Practical - CI Evaluation
 
 on:
@@ -95,7 +96,7 @@ jobs:
       - name: Check frontend response
         run: |
           for attempt in $(seq 1 20); do
-            if curl --fail --silent http://localhost:8080/ > /dev/null; then
+            if curl --fail --silent http://localhost:8081/ > /dev/null; then
               echo "Frontend is responding"
               exit 0
             fi
